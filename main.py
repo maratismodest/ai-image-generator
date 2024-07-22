@@ -12,8 +12,8 @@ pipe = pipe.to("mps")
 # pipe = pipe.to("cpu")
 
 # Generate an image
-prompt = "a photo of a beautiful Bulgarian woman"
-images = pipe(prompt,num_inference_steps=20).images
+prompt = "a cartoon girl like for application"
+images = pipe(prompt,num_inference_steps=50).images
 # images = pipe(prompt,num_inference_steps=50, num_images_per_prompt=2).images
 
 # Save the image
@@ -21,4 +21,4 @@ images = pipe(prompt,num_inference_steps=20).images
 
 # Save all generated images
 for i, image in enumerate(images):
-    image.save(f"national clothes{i}.png")
+    image.save(f"{prompt}{i}.png")
