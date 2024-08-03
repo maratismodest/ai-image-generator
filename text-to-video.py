@@ -7,6 +7,6 @@ pipeline = pipeline.to("mps")
 # pipeline.enable_model_cpu_offload()
 pipeline.enable_vae_slicing()
 
-prompt = "Confident teddy bear surfer rides the wave in the tropics"
+prompt = "Wide angle shot: A stunning sunset over a futuristic cityscape with towering skyscrapers and flying vehicles. The sky is ablaze with vibrant hues of orange and purple, casting a warm glow on the sleek metallic buildings."
 video_frames = pipeline(prompt).frames[0]
 export_to_video(video_frames, "modelscopet2v.mp4", fps=10)
